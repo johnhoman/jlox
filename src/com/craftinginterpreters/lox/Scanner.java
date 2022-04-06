@@ -50,12 +50,12 @@ public class Scanner {
         return tokens;
     }
 
-    private boolean isAtEnd() {
-        return current >= source.length();
-    }
-
     private char advance() {
         return source.charAt(current++);
+    }
+
+    private boolean isAtEnd() {
+        return current >= source.length();
     }
 
     private void addToken(TokenType type) {
