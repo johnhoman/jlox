@@ -105,15 +105,15 @@ public class Scanner {
         addToken(STRING, value);
     }
 
-    private boolean isDigit(char c) {
-        return '0' <= c && c <= '9';
-    }
-
     private boolean isAsciiLower(char c) { return 'a' <= c && c <= 'z'; }
     private boolean isAsciiUpper(char c) { return 'A' <= c && c <= 'Z'; }
 
     private boolean isAlpha(char c) {
         return isAsciiLower(c) || isAsciiUpper(c) || c == '_';
+    }
+
+    private boolean isDigit(char c) {
+        return '0' <= c && c <= '9';
     }
 
     private boolean isAlphaNumeric(char c) {
